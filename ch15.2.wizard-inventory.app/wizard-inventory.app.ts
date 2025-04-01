@@ -15,8 +15,11 @@ userInput = readline.questionInt("Command: ");
 getAndDoMenu(userInput, inventory);
 
 
-
 };
+console.log("Goodbye!");
+
+
+
 function displayMenu() {
     console.log("COMMAND MENU\nshow - Show all items\n"
         +"grab - Grab an item\n"
@@ -37,7 +40,13 @@ function getAndDoMenu(input: number, i2: Item[]) {
             break;
         case 2:
             if (i2.length<6) {
-            let idNum = readline.questionInt("Enter the id: ");
+            let idNum = 0;
+            for (let j of i2) {
+                    if (j.id>idNum) {
+                        idNum = j.id;
+                    }
+            }
+            idNum+=1;
             let itemName = readline.question("Enter item name: ");
             let it = new Item(idNum, itemName);
             i2.push(it);
