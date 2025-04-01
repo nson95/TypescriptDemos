@@ -1,4 +1,5 @@
-let readline = require("readline-sync");
+function g() {
+    let readline = require("readline-sync");
 let choice: string = "y";
 while (choice == "y") {
     console.log("Welcome to the Table of Powers App \n\n");
@@ -11,3 +12,5 @@ while (choice == "y") {
     choice = readline.question("Continue? (y/n)").toLowerCase();
 }
 console.log("Goodbye!");
+}
+g();
