@@ -1,7 +1,7 @@
 function g() {
     let readline = require("readline-sync");
-let choice: string = "y";
-while (choice == "y") {
+    let choice: string = "y";
+    while (choice == "y") {
     console.log("Welcome to the Table of Powers App \n\n");
     let userNum: number = readline.questionInt("Enter an integer: ");
     console.log("Number\tSquared\tCubed\n");
